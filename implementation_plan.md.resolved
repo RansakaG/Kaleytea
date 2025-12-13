@@ -1,0 +1,138 @@
+# Kaley Tea Website - Sitemap & Structure
+
+## Website Map Overview
+
+```mermaid
+graph TD
+    HOME[🏠 Home] --> VISIT[Visit & Heal]
+    HOME --> PRODUCTS[Products & Shop]
+    HOME --> JOIN[Join Our Journey]
+    HOME --> SUPPORT[Support Us]
+    HOME --> STORY[Our Story]
+    
+    VISIT --> TOURS[Day Tours]
+    VISIT --> RETREATS[Retreats & Stays]
+    VISIT --> NEARBY[Nearby Attractions]
+    VISIT --> BOOKING[Book Now]
+    
+    PRODUCTS --> TEA_RANGE[Our Teas]
+    PRODUCTS --> BUY_LOCAL[Buy in Sri Lanka]
+    PRODUCTS --> BUY_INTL[Buy Internationally]
+    PRODUCTS --> BULK[Bulk Orders]
+    PRODUCTS --> TASTE[Where to Taste]
+    
+    JOIN --> NATURE[Work with Nature]
+    JOIN --> COMMUNITY[Work with Community]
+    JOIN --> PROGRAMMES[Residential Programmes]
+    JOIN --> AGRICULTURE[Agriculture & Manufacturing]
+    JOIN --> SPREAD[Spread the Word]
+    
+    SUPPORT --> DONATE[Donate]
+    
+    STORY --> ABOUT[About Us]
+    STORY --> GALLERY[Gallery]
+    STORY --> REVIEWS[Reviews & Press]
+    STORY --> AWARDS[Awards & Certifications]
+```
+
+---
+
+## Page Structure
+
+### 🏠 **HOME PAGE**
+| Section | Purpose |
+|---------|---------|
+| Hero | "Healing through Tea, Nature & Community" with stunning imagery |
+| Quick Actions | Visit / Shop / Join CTAs |
+| Why Kaley | Unique value proposition |
+| Activity Calendar Popup | Upcoming events/retreats |
+| Testimonials | Social proof |
+| Footer | Contact, social links, newsletter |
+
+---
+
+### 🌿 **VISIT & HEAL**
+
+| Page | Content |
+|------|---------|
+| **Day Tours** | Tour options, what's included, pricing, booking form |
+| **Retreats & Stays** | Farmhouse stays (2+ days), retreat packages, discounts for longer stays |
+| **Nearby Attractions** | Local points of interest |
+| **Book Now** | Unified booking inquiry form |
+
+---
+
+### 🍵 **PRODUCTS & SHOP**
+
+| Page | Content |
+|------|---------|
+| **Our Teas** | Product catalog with descriptions, health benefits |
+| **Buy in Sri Lanka** | WhatsApp/FB shop links, list of local retailers |
+| **Buy Internationally** | International stockists |
+| **Bulk Orders** | Form for hotels, shops, corporate gifts |
+| **Where to Taste** | Restaurants/hotels serving Kaley Tea |
+
+---
+
+### 🤝 **JOIN OUR JOURNEY**
+
+| Page | Content |
+|------|---------|
+| **Work with Nature** | Researchers, students, conservationists, volunteers |
+| **Work with Community** | Community activists, social researchers |
+| **Residential Programmes** | Join, lead, or co-facilitate programmes |
+| **Agriculture & Manufacturing** | Expertise in organic farming, agro-forestry, marketing |
+| **Spread the Word** | Write reviews, publish articles, create content |
+
+---
+
+### 💚 **SUPPORT US**
+Single page with donation/financial support options
+
+---
+
+### 📖 **OUR STORY**
+
+| Page | Content |
+|------|---------|
+| **About Us** | Mission, vision, team, journey so far |
+| **Gallery** | Photos and videos |
+| **Reviews & Press** | Testimonials, articles, media coverage |
+| **Awards & Certifications** | Organic, Fairtrade, recognition |
+
+---
+
+## Visitor-Targeted Entry Points
+
+| Visitor Type | Landing Focus | Key CTA |
+|--------------|---------------|---------|
+| Tea Consumer (Sri Lanka) | Products → Buy Local | "Order via WhatsApp" |
+| Tea Sellers/Hotels | Products → Bulk Orders | "Request Quote" |
+| Nature Lovers | Join → Work with Nature | "Volunteer with Us" |
+| Community Activists | Join → Work with Community | "Get Involved" |
+| Travelers | Visit → Retreats | "Book Your Stay" |
+| Journalists/Influencers | Our Story | "Press Kit" |
+
+---
+
+## Design Guidelines
+
+| Element | Specification |
+|---------|---------------|
+| **Primary Colors** | Earthy greens `#2D5A3D`, forest tones |
+| **Secondary Colors** | Warm browns `#8B6F47`, earth tones |
+| **Accent Colors** | Warm gold `#D4A846` for CTAs |
+| **Typography** | Clean, readable (Outfit/Lora combination) |
+| **Imagery** | Bright, natural, inviting (not dark/haunting) |
+| **Feel** | "One with nature yet vibrant and inspiring" |
+
+---
+
+## User Review Required
+
+> [!IMPORTANT]
+> Please confirm:
+> 1. Does this sitemap cover all your needs?
+> 2. Any pages to add, remove, or rename?
+> 3. Which pages are highest priority to build first?
+> 4. Do you have content/images ready, or should I use placeholders?
