@@ -306,55 +306,73 @@
 
   <header>
     <div class="header-content">
-      <img src="Logo.png" alt="Kaley Tea Logo" class="logo">
-      <div class="header-text">
-        <h1>Kaley Tea</h1>
-        <p>Website Development Proposal</p>
-        <div class="tagline">"Do Nothing. Just Feel."</div>
-      </div>
+      <p class="pre-title">✦ Professional Website Proposal ✦</p>
+      <h1>KALEY TEA</h1>
+      <div class="header-divider"></div>
+      <div class="tagline">"Do Nothing. Just Feel."</div>
     </div>
   </header>
 
   <style>
+    header {
+      background: linear-gradient(135deg, #1a4d2e 0%, #0d2818 50%, #1a4d2e 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at center, rgba(212, 165, 116, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
     .header-content {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 25px;
-      max-width: 600px;
-      margin: 0 auto;
+      gap: 12px;
+      position: relative;
+      z-index: 1;
     }
 
-    .logo {
-      width: 80px;
-      height: auto;
-      border-radius: 50%;
-      background: white;
-      padding: 5px;
-    }
-
-    .header-text {
-      text-align: left;
-    }
-
-    .header-text h1 {
+    .header-content .pre-title {
       margin: 0;
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    .header-text p {
-      margin: 5px 0 0 0;
-      font-size: 0.95rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
       opacity: 0.9;
     }
 
-    .header-text .tagline {
-      margin-top: 8px;
-      font-size: 1rem;
+    .header-content h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 8px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-divider {
+      width: 120px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 8px 0;
+    }
+
+    .header-content .tagline {
+      margin: 0;
+      font-size: 1.1rem;
       font-style: italic;
-      color: var(--gold);
+      font-weight: 300;
+      color: var(--gold-light);
+      letter-spacing: 1px;
     }
   </style>
 
