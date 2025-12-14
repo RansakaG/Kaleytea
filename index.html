@@ -13,19 +13,22 @@
   <style>
     :root {
       --forest-deep: #1a4d2e;
+      --forest-dark: #0d2818;
       --forest-light: #2d6b45;
       --terracotta: #c17f59;
       --terracotta-light: #d49a7a;
-      --cream: #f5f1eb;
-      --cream-dark: #ebe7df;
-      --gold: #d4a574;
-      --gold-light: #e8c9a8;
-      --text-dark: #2d3d35;
+      --cream: #faf8f5;
+      --cream-dark: #f0ece5;
+      --gold: #c9a66b;
+      --gold-light: #e0cba3;
+      --gold-dark: #a88a4a;
+      --text-dark: #1e2a24;
       --text-muted: #5a6b62;
       --white: #ffffff;
-      --shadow-soft: 0 4px 12px rgba(26, 77, 46, 0.08);
-      --shadow-medium: 0 8px 24px rgba(26, 77, 46, 0.15);
-      --shadow-strong: 0 12px 36px rgba(26, 77, 46, 0.2);
+      --shadow-soft: 0 4px 20px rgba(26, 77, 46, 0.06);
+      --shadow-medium: 0 8px 32px rgba(26, 77, 46, 0.12);
+      --shadow-strong: 0 16px 48px rgba(26, 77, 46, 0.18);
+      --shadow-gold: 0 4px 16px rgba(201, 166, 107, 0.2);
     }
 
     * {
@@ -35,17 +38,19 @@
     body {
       margin: 0;
       font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-      background: var(--cream);
+      background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+      background-attachment: fixed;
       color: var(--text-dark);
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     /* === HEADER === */
     header {
-      background: var(--forest-deep);
+      background: linear-gradient(135deg, var(--forest-deep) 0%, var(--forest-dark) 50%, var(--forest-deep) 100%);
       color: var(--white);
-      padding: 50px 20px 40px;
+      padding: 55px 20px 45px;
       text-align: center;
+      border-bottom: 3px solid var(--gold);
     }
 
     header h1 {
@@ -75,19 +80,20 @@
     section {
       max-width: 1000px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 70px 24px;
     }
 
     /* === CARDS === */
     .card {
       background: var(--white);
-      border-radius: 20px;
+      border-radius: 16px;
       padding: 40px 45px;
       box-shadow: var(--shadow-soft);
-      margin-bottom: 35px;
-      border: 1px solid rgba(26, 77, 46, 0.06);
-      transition: all 0.3s ease;
+      margin-bottom: 40px;
+      border: 1px solid rgba(201, 166, 107, 0.15);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       position: relative;
+      overflow: hidden;
     }
 
     .card::before {
@@ -96,52 +102,80 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--forest-deep), var(--gold), var(--terracotta));
-      border-radius: 20px 20px 0 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(201, 166, 107, 0.02) 0%, transparent 50%);
+      pointer-events: none;
     }
 
     .card:hover {
       box-shadow: var(--shadow-medium);
-      transform: translateY(-4px);
+      transform: translateY(-6px);
+      border-color: rgba(201, 166, 107, 0.3);
     }
 
     /* === TYPOGRAPHY === */
     h2 {
       color: var(--forest-deep);
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       font-weight: 700;
-      font-size: 1.9rem;
+      font-size: 1.75rem;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
+      letter-spacing: 0.5px;
+      position: relative;
     }
 
     h3 {
       color: var(--forest-deep);
       font-weight: 600;
+      letter-spacing: 0.3px;
     }
 
     h4 {
       color: var(--forest-deep);
       font-weight: 600;
+      letter-spacing: 0.3px;
     }
 
     p {
-      line-height: 1.8;
+      line-height: 1.85;
       font-weight: 400;
+      color: var(--text-dark);
     }
 
     /* === LISTS === */
     .list {
-      margin: 15px 0;
-      padding-left: 24px;
+      margin: 20px 0;
+      padding-left: 0;
+      list-style: none;
     }
 
     .list li {
-      padding: 10px 0;
+      padding: 14px 0 14px 24px;
       font-weight: 400;
-      border-bottom: 1px solid rgba(26, 77, 46, 0.05);
+      border-bottom: 1px solid rgba(201, 166, 107, 0.15);
+      position: relative;
+    }
+
+    .list li::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 0.6rem;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     .list li:last-child {
@@ -150,69 +184,75 @@
 
     .list li b {
       color: var(--forest-deep);
+      font-weight: 600;
     }
 
     /* === ACCORDION === */
     .accordion button {
       width: 100%;
-      padding: 22px 28px;
-      border: 2px solid var(--cream-dark);
-      border-radius: 16px;
-      background: linear-gradient(135deg, var(--white) 0%, var(--cream) 100%);
+      padding: 20px 28px;
+      border: 1px solid rgba(201, 166, 107, 0.2);
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--white) 0%, rgba(250, 248, 245, 0.8) 100%);
       color: var(--forest-deep);
       text-align: left;
       cursor: pointer;
-      font-size: 1.1rem;
-      font-weight: 700;
+      font-size: 1.05rem;
+      font-weight: 600;
       font-family: 'Montserrat', sans-serif;
-      transition: all 0.3s ease;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       box-shadow: var(--shadow-soft);
       display: flex;
       align-items: center;
       justify-content: space-between;
+      letter-spacing: 0.3px;
     }
 
     .accordion button:hover {
       background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
       border-color: var(--gold);
-      box-shadow: var(--shadow-medium);
-      transform: translateX(6px);
+      box-shadow: var(--shadow-gold);
+      transform: translateY(-3px);
     }
 
     .panel {
       display: none;
-      padding: 25px 28px 20px;
+      padding: 28px 32px 24px;
       color: var(--text-dark);
       font-weight: 400;
       background: var(--white);
-      border-radius: 0 0 16px 16px;
-      margin-top: -10px;
-      border: 1px solid var(--cream-dark);
+      border-radius: 0 0 12px 12px;
+      margin-top: -8px;
+      border: 1px solid rgba(201, 166, 107, 0.15);
       border-top: none;
+      box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.02);
     }
 
     /* === BADGES === */
     .badge {
-      background: linear-gradient(135deg, var(--gold) 0%, var(--terracotta) 100%);
+      background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 50%, var(--gold-light) 100%);
       color: var(--white);
       display: inline-block;
-      padding: 6px 16px;
+      padding: 6px 18px;
       border-radius: 50px;
-      font-size: .85rem;
+      font-size: .8rem;
       font-weight: 600;
-      box-shadow: 0 3px 8px rgba(193, 127, 89, 0.35);
+      letter-spacing: 0.5px;
+      box-shadow: var(--shadow-gold);
+      text-transform: uppercase;
     }
 
     /* === MERMAID CONTAINER === */
     .mermaid-container {
       background: var(--white);
-      border-radius: 20px;
+      border-radius: 16px;
       padding: 40px 45px;
       box-shadow: var(--shadow-soft);
-      margin-bottom: 35px;
-      border: 1px solid rgba(26, 77, 46, 0.06);
-      transition: all 0.3s ease;
+      margin-bottom: 40px;
+      border: 1px solid rgba(201, 166, 107, 0.15);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       position: relative;
+      overflow: hidden;
     }
 
     .mermaid-container::before {
@@ -221,14 +261,25 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--forest-deep), var(--gold), var(--terracotta));
-      border-radius: 20px 20px 0 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
+    }
+
+    .mermaid-container::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(201, 166, 107, 0.02) 0%, transparent 50%);
+      pointer-events: none;
     }
 
     .mermaid-container:hover {
       box-shadow: var(--shadow-medium);
-      transform: translateY(-4px);
+      transform: translateY(-6px);
+      border-color: rgba(201, 166, 107, 0.3);
     }
 
     .map-title {
@@ -242,30 +293,48 @@
     /* === FOOTER === */
     footer {
       text-align: center;
-      padding: 60px 20px;
+      padding: 50px 20px;
       color: var(--text-muted);
       font-weight: 400;
-      background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
-      border-top: 4px solid var(--forest-deep);
+      background: linear-gradient(135deg, var(--forest-deep) 0%, var(--forest-dark) 100%);
+      border-top: 3px solid var(--gold);
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201, 166, 107, 0.3), transparent);
+    }
+
+    footer p,
+    footer {
+      color: rgba(255, 255, 255, 0.8);
     }
 
     footer strong {
-      color: var(--forest-deep);
+      color: var(--gold-light);
     }
 
     /* === SPECIAL SECTIONS === */
     .highlight-box {
-      background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
-      padding: 20px;
+      background: linear-gradient(135deg, rgba(201, 166, 107, 0.08) 0%, rgba(201, 166, 107, 0.03) 100%);
+      padding: 24px;
       border-radius: 12px;
-      border-left: 4px solid var(--gold);
+      border-left: 3px solid var(--gold);
+      box-shadow: inset 0 0 20px rgba(201, 166, 107, 0.05);
     }
 
     .warning-box {
-      background: linear-gradient(135deg, #fff8e6 0%, #fff3cd 100%);
-      padding: 15px 20px;
+      background: linear-gradient(135deg, rgba(193, 127, 89, 0.08) 0%, rgba(193, 127, 89, 0.03) 100%);
+      padding: 18px 24px;
       border-radius: 12px;
-      border-left: 4px solid var(--terracotta);
+      border-left: 3px solid var(--terracotta);
+      box-shadow: inset 0 0 20px rgba(193, 127, 89, 0.05);
     }
 
     /* === UTILITY CLASSES === */
