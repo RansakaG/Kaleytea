@@ -208,9 +208,10 @@
       background: var(--white);
       border-radius: 20px;
       padding: 40px 45px;
-      box-shadow: var(--shadow-medium);
+      box-shadow: var(--shadow-soft);
       margin-bottom: 35px;
-      border: 2px solid var(--cream-dark);
+      border: 1px solid rgba(26, 77, 46, 0.06);
+      transition: all 0.3s ease;
       position: relative;
     }
 
@@ -225,11 +226,16 @@
       border-radius: 20px 20px 0 0;
     }
 
+    .mermaid-container:hover {
+      box-shadow: var(--shadow-medium);
+      transform: translateY(-4px);
+    }
+
     .map-title {
-      text-align: center;
+      text-align: left;
       color: var(--forest-deep);
-      margin-bottom: 24px;
-      font-size: 1.5rem;
+      margin-bottom: 20px;
+      font-size: 1.9rem;
       font-weight: 700;
     }
 
@@ -392,20 +398,20 @@
     </div>
 
     <div class="mermaid-container">
-      <div class="map-title">🗺️ Website Navigation Map</div>
+      <h2>🗺️ Website Navigation Map</h2>
       <div style="text-align:center; padding:20px;">
         <img src="kaley_mindmap_v3_1765633205524.png" alt="Kaley Tea V3 Website Structure Mind Map"
           style="max-width:100%; height:auto; border-radius:12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
         <p style="margin-top:15px; color:#666; font-size:0.9rem; font-style:italic;">
-          V3 Final Website Structure - 4 Main Branches: Visit & Heal, Buy Sip & Heal, Connect & Heal, Our Healing Story
+          V3 Final Website Structure - 4 Main Menus: Visit & Heal, Buy Sip & Heal, Connect & Heal, Our Healing Story
         </p>
       </div>
     </div>
 
     <div class="card">
       <h2>📊 Navigation Map Explained</h2>
-      <p>The website is structured around <b>four main branches</b> that represent the core journeys visitors can take.
-        Each branch serves a specific purpose and target audience. Below is a detailed breakdown of every section with
+      <p>The website is structured around <b>four main menus</b> that represent the core journeys visitors can take.
+        Each menu serves a specific purpose and target audience. Below is a detailed breakdown of every section with
         page purposes, content descriptions, and user actions.</p>
 
       <!-- Overview Summary -->
@@ -439,14 +445,14 @@
           </div>
         </div>
         <p style="text-align:center;margin:20px 0 0 0;font-size:0.9rem;opacity:0.8;">
-          <b>Total: 18 Sections</b> across 4 main branches + Utility Pages (Contact, FAQ)
+          <b>Total: 18 Sections</b> across 4 main menus + Utility Pages (Contact, FAQ)
         </p>
       </div>
 
-      <!-- BRANCH 1: Visit & Heal -->
+      <!-- 1: Visit & Heal -->
       <div style="border-left:4px solid #1a4d2e;padding-left:20px;margin:40px 0;">
         <h3 style="color:var(--forest-deep);margin-top:0;margin-bottom:10px;font-size:1.4rem;">
-          🌿 BRANCH 1: Visit & Heal (3 Sections)
+          🌿 1. Visit & Heal (3 Sections)
         </h3>
         <div style="background:#e8f5e9;padding:12px 15px;border-radius:8px;margin-bottom:20px;">
           <p style="margin:0;"><b>Purpose:</b> Invite guests to experience Kaley's healing retreat in person.</p>
@@ -487,10 +493,10 @@
           stays, or travel agent bookings)</p>
       </div>
 
-      <!-- BRANCH 2: Buy, Sip & Heal -->
+      <!-- 2: Buy, Sip & Heal -->
       <div style="border-left:4px solid var(--terracotta);padding-left:20px;margin:40px 0;">
         <h3 style="color:var(--forest-deep);margin-top:0;margin-bottom:10px;font-size:1.4rem;">
-          ☕ BRANCH 2: Buy, Sip & Heal (5 Sections)
+          ☕ 2. Buy, Sip & Heal (5 Sections)
         </h3>
         <div style="background:#fff8e1;padding:12px 15px;border-radius:8px;margin-bottom:20px;">
           <p style="margin:0;"><b>Purpose:</b> Enable customers to purchase Kaley's organic tea products.</p>
@@ -533,10 +539,10 @@
         </div>
       </div>
 
-      <!-- BRANCH 3: Connect & Heal -->
+      <!-- 3: Connect & Heal -->
       <div style="border-left:4px solid var(--gold);padding-left:20px;margin:40px 0;">
         <h3 style="color:var(--forest-deep);margin-top:0;margin-bottom:10px;font-size:1.4rem;">
-          🤝 BRANCH 3: Connect & Heal (6 Sections)
+          🤝 3. Connect & Heal (6 Sections)
         </h3>
         <div style="background:#fce4ec;padding:12px 15px;border-radius:8px;margin-bottom:20px;">
           <p style="margin:0;"><b>Purpose:</b> Invite collaborators, volunteers, experts, and donors to join Kaley's
@@ -592,10 +598,10 @@
         </p>
       </div>
 
-      <!-- BRANCH 4: Our Healing Story -->
+      <!-- 4: Our Healing Story -->
       <div style="border-left:4px solid #8b5a2b;padding-left:20px;margin:40px 0;">
         <h3 style="color:var(--forest-deep);margin-top:0;margin-bottom:10px;font-size:1.4rem;">
-          📖 BRANCH 4: Our Healing Story (4 Sections)
+          📖 4. Our Healing Story (4 Sections)
         </h3>
         <div style="background:#efebe9;padding:12px 15px;border-radius:8px;margin-bottom:20px;">
           <p style="margin:0;"><b>Purpose:</b> Tell Kaley's story, build trust, and establish credibility.</p>
@@ -817,7 +823,7 @@
           <ul class="list" style="margin:10px 0;">
             <li>Project Setup & React/TypeScript Environment</li>
             <li>Database Schema Design (forms, products, bookings)</li>
-            <li>Sitemap Finalization: 4 branches, 18 sections</li>
+            <li>Sitemap Finalization: 4 menus, 18 sections</li>
             <li>Design System & Component Library (colors, fonts, cards)</li>
             <li>Navigation Structure (4 main menu items + footer links)</li>
             <li>Content Templates & Asset Requirements</li>
@@ -929,27 +935,37 @@
       </button>
       <div id="panel4" class="panel">
         <div
-          style="background:linear-gradient(135deg, var(--forest-deep) 0%, #2d6b45 100%);color:white;padding:20px;border-radius:12px;margin-bottom:20px;">
-          <h3 style="color:white;margin:0 0 10px 0;text-align:center;">💵 Finalized Quote: React Development</h3>
-          <div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:15px;">
+          style="background:linear-gradient(135deg, var(--forest-deep) 0%, #2d6b45 100%);color:white;padding:15px;border-radius:10px;margin-bottom:15px;">
+          <h4 style="color:white;margin:0 0 8px 0;text-align:center;font-size:1rem;">💵 Finalized Quote: React
+            Development</h4>
+          <div style="display:flex;justify-content:center;gap:25px;flex-wrap:wrap;margin-top:10px;">
             <div style="text-align:center;">
-              <div style="font-size:2rem;font-weight:bold;">110</div>
-              <div style="opacity:0.8;font-size:0.9rem;">Hours</div>
+              <div style="font-size:1.4rem;font-weight:bold;">110</div>
+              <div style="opacity:0.8;font-size:0.8rem;">Hours</div>
             </div>
             <div style="text-align:center;">
-              <div style="font-size:2rem;font-weight:bold;">LKR 4,000</div>
-              <div style="opacity:0.8;font-size:0.9rem;">Per Hour</div>
+              <div style="font-size:1.4rem;font-weight:bold;">LKR 4,000</div>
+              <div style="opacity:0.8;font-size:0.8rem;">Per Hour</div>
             </div>
             <div style="text-align:center;">
-              <div style="font-size:2.2rem;font-weight:bold;color:#ffd700;">LKR 4,40,000</div>
-              <div style="opacity:0.8;font-size:0.9rem;">Total Investment</div>
+              <div style="font-size:1.1rem;font-weight:bold;text-decoration:line-through;opacity:0.6;">LKR 4,40,000
+              </div>
+              <div style="opacity:0.8;font-size:0.8rem;">Original Price</div>
             </div>
+          </div>
+          <!-- Discount Banner -->
+          <div
+            style="background:rgba(255,215,0,0.2);border:1px solid #ffd700;border-radius:8px;padding:10px;margin-top:12px;text-align:center;">
+            <div style="font-size:0.9rem;font-weight:600;color:#ffd700;margin-bottom:5px;">🎉 SPECIAL DISCOUNT: LKR
+              1,65,000 OFF (~37%)</div>
+            <div style="font-size:1.8rem;font-weight:bold;color:#ffd700;">LKR 2,75,000</div>
+            <div style="opacity:0.9;font-size:0.85rem;margin-top:3px;">Your Special Investment</div>
           </div>
         </div>
 
         <h4 style="color:var(--forest-deep);margin-top:0;">📋 What's Included</h4>
         <ul class="list">
-          <li><b>21 Pages:</b> Home + 18 sections across 4 branches + 2 utility pages</li>
+          <li><b>21 Pages:</b> Home + 18 sections across 4 main menus + 2 utility pages</li>
           <li><b>6+ Forms:</b> Booking, inquiry, application, donation, contact forms</li>
           <li><b>Email System:</b> Automated confirmations to users & staff</li>
           <li><b>Responsive Design:</b> Mobile, tablet, and desktop optimized</li>
@@ -969,17 +985,17 @@
           <div style="background:#e8f5e9;padding:15px;border-radius:8px;text-align:center;">
             <b>30%</b><br>
             <span style="font-size:0.85rem;color:#555;">Upfront</span><br>
-            <span style="font-size:0.9rem;color:var(--forest-deep);font-weight:bold;">LKR 1,32,000</span>
+            <span style="font-size:0.9rem;color:var(--forest-deep);font-weight:bold;">LKR 82,500</span>
           </div>
           <div style="background:#fff8e1;padding:15px;border-radius:8px;text-align:center;">
             <b>40%</b><br>
             <span style="font-size:0.85rem;color:#555;">Mid-Project</span><br>
-            <span style="font-size:0.9rem;color:var(--forest-deep);font-weight:bold;">LKR 1,76,000</span>
+            <span style="font-size:0.9rem;color:var(--forest-deep);font-weight:bold;">LKR 1,10,000</span>
           </div>
           <div style="background:#e3f2fd;padding:15px;border-radius:8px;text-align:center;">
             <b>30%</b><br>
             <span style="font-size:0.85rem;color:#555;">On Launch</span><br>
-            <span style="font-size:0.9rem;color:var(--forest-deep);font-weight:bold;">LKR 1,32,000</span>
+            <span style="font-size:0.9rem;color:var(--forest-deep);font-weight:bold;">LKR 82,500</span>
           </div>
         </div>
 
